@@ -10,3 +10,8 @@ Route::get('/user', function (Request $request) {
 
 
 Route::post('/mensaje/{id}/procesado', [MensajeController::class, 'marcarComoProcesado']);
+
+Route::middleware('api.token')->group(function () {
+    // La ruta final será: /api/pendientes
+    Route::get('/pendientes', [MensajeController::class, 'pendientes']);
+});

@@ -44,4 +44,4 @@ Route::middleware([
 });
 
 
-Route::get('/pendientes', [MensajeController::class, 'pendientes']);
+// Route::get('/pendientes', [MensajeController::class, 'pendientes']);
